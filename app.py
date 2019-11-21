@@ -18,4 +18,4 @@ def image_to_text():
             return image_to_text     
     
 # When debug = True, code is reloaded on the fly while saved
-app.run(host='0.0.0.0', port='5008', debug=True)
+app.run()
