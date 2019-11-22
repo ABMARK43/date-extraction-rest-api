@@ -18,4 +18,5 @@ def image_to_text():
             return image_to_text     
     
 # When debug = True, code is reloaded on the fly while saved
-app.run()
+if __name__ =='__main__':
+    app.run()
