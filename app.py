@@ -78,5 +78,6 @@ class User(Resource):
         return "{} is deleted.".format(name), 200
       
 api.add_resource(User, "/user/<string:name>")
-
-app.run(debug=True,port = 5004)
+if __name__=='__main__':        
+    #Run the applications
+    app.run()
