@@ -15,7 +15,7 @@ def image_to_text():
             file1 = request.files.get('media')
             image = Image.open(file1)
             image_to_text = pytesseract.image_to_string(image, lang='eng')
-            matches = datefinder.find_dates(string_with_dates)
+            matches = datefinder.find_dates(image_to_text)
             dates = []
             for i in matches:
                 dates.append(i)
