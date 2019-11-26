@@ -3,6 +3,7 @@ import json
 import pytesseract
 from PIL import Image
 import re
+import datefinder
 
 app = Flask(__name__)
 
@@ -14,8 +15,12 @@ def image_to_text():
             file1 = request.files.get('media')
             image = Image.open(file1)
             image_to_text = pytesseract.image_to_string(image, lang='eng')
+            matches = datefinder.find_dates(string_with_dates)
+            dates = []
+            for i in matches:
+                dates.append(i)
             # m = re.search('\b(\d{2}-\d{2}-\d{4})\.', image_to_text)                           
-            return image_to_text     
+            return dates     
     
 # When debug = True, code is reloaded on the fly while saved
 if __name__ =='__main__':
