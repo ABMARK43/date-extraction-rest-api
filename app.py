@@ -20,7 +20,7 @@ def image_to_text():
             for i in matches:
                 dates.append(i)
             # m = re.search('\b(\d{2}-\d{2}-\d{4})\.', image_to_text)                           
-            return dates     
+            return str(date[0])    
     
 # When debug = True, code is reloaded on the fly while saved
 if __name__ =='__main__':
