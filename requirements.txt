@@ -3,5 +3,4 @@ Flask-RESTful
 pytesseract
 pillow
 uwsgi
-re
 datefinder
