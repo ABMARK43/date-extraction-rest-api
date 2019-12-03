@@ -8,7 +8,7 @@ import base64
 
 app = Flask(__name__)
 
-@app.route('/image_to_text', methods=['POST'])
+@app.route('/extract_date', methods=['POST'])
 def image_to_text():
     if request.method == 'POST':
         # check if the post request has the file part
